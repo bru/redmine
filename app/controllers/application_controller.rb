@@ -99,6 +99,7 @@ class ApplicationController < ActionController::Base
   def check_if_login_required
     # no check needed if user is already logged in
     return true if User.current.logged?
+    return true if params[:controller] == "github_hook"
     require_login if Setting.login_required?
   end 
   
