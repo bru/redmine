@@ -20,3 +20,4 @@
 /tmp/test/*
 /vendor/rails
 *.rbc
+mkmf.log
